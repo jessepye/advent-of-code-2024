@@ -9,10 +9,14 @@ for line in file:
         if num2 in list2dict:
             list2dict[num2] += 1
         else:
-            list2dict[num2] = 0
+            list2dict[num2] = 1
 similarityScore = 0
 for num in list1:
     if num in list2dict:
+        # print("old similarityScore", similarityScore)
+        # print("num", num)
+        # print("list2dict[num]",list2dict[num])
         similarityScore += num * list2dict[num]
+        # print("new similarityScore", similarityScore)
 print(similarityScore)
 
