@@ -1,6 +1,9 @@
 file = open("input.txt", "r")
 list1 = []
 list2dict = {}
+
+import ipdb; ipdb.set_trace()
+
 for line in file:
     if(len(line.split()) > 1):
         num1 = int(line.split()[0])
