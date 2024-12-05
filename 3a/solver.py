@@ -16,4 +16,3 @@ for mul in muls:
 
 print(total)
 
-
