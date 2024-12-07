@@ -33,7 +33,7 @@ for y in range(len(originalRoom)):
         break
 
 startingX , startingY = x, y
-print(f"starting position ({x}, {y})")
+# print(f"starting position ({x}, {y})")
 
 def producesLoop(room, x, y) -> bool:
     dirs = ((0, -1), (1, 0), (0, 1), (-1, 0))  # dx, dy
@@ -53,7 +53,7 @@ def producesLoop(room, x, y) -> bool:
 
         # Are we still in the room?
         if nextX < 0 or nextX >= len(room[y]) or nextY < 0 or nextY >= len(room):
-            print("we have left the room")
+            # print("we have left the room")
             return False
 
         nextLoc = room[nextY][nextX]
@@ -67,11 +67,11 @@ def producesLoop(room, x, y) -> bool:
             y = nextY
             continue
 
-print(f"Original Room:")
-printRoom(originalRoom)
-
-print(f"Solved Room")
-printRoom(solvedRoom)
+# print(f"Original Room:")
+# printRoom(originalRoom)
+#
+# print(f"Solved Room")
+# printRoom(solvedRoom)
 
 # Change each 'X' one at a time to a '#' and see if it produces a loop
 
@@ -84,7 +84,7 @@ for y in range(len(solvedRoom)):
             modifiedRoom[y][x] = '#'
             if producesLoop(modifiedRoom, startingX, startingY):
                 total += 1
-                print(f"Found a loop when placing a wall at {x}, {y}. New total: {total}")
+                # print(f"Found a loop when placing a wall at {x}, {y}. New total: {total}")
 
 print(total)
 
