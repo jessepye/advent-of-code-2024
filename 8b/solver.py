@@ -55,9 +55,6 @@ def addAntinodesToMap(coordinates: list, xLen: int, yLen: int, antinodeMap: list
             ax1 = x1 - dx
             ay1 = y1 - dy
 
-            # antinode 2 (there are now many of these extending in the (dx, dy) direction)
-            ax2 = x2 + dx
-            ay2 = y2 + dy
             while ax1 >= 0 and ax1 < xLen and ay1 >= 0 and ay1 < yLen:
                 print(f"antiNode found at ({ax1}, {ay1})")
                 antinodeMap[ay1][ax1] = '#'
